@@ -5,9 +5,10 @@ spoon and spoon gradle plugin
 
 
 Usage for debug build 
-
+=====================
+```
 ./gradlew spoonDebugAndroidTest
-
+```
 
 [Spoon Client v1.5.3](https://github.com/square/spoon)
 
