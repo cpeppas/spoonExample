@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+apply plugin: 'spoon'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.example.spoonexample"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+spoon {
+    // Enable debug output
+    debug = true
+}
+
+final ANDROID_SUPPORT = "23.4.0"
+final ANDROID_SUPPORT_TEST = "0.5"
+final ESPRESSO_VERSION = '2.2.2'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile "com.android.support:appcompat-v7:$ANDROID_SUPPORT"
+
+    androidTestCompile "com.android.support.test.espresso:espresso-core:$ESPRESSO_VERSION"
+    androidTestCompile "com.android.support.test:runner:$ANDROID_SUPPORT_TEST"
+    androidTestCompile 'com.squareup.spoon:spoon-client:1.2.0'
+}
+
+configurations.all {
+    resolutionStrategy.force "com.android.support:support-annotations:$ANDROID_SUPPORT"
+}
