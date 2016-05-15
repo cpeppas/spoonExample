@@ -4,4 +4,5 @@ This is to demonstrate a Simple UI test using Espresso (Android Test Support Lib
 spoon and spoon gradle plugin
 
 [Spoon Client](https://github.com/square/spoon)
+
 [Spoon Gradle Plugin](https://github.com/stanfy/spoon-gradle-plugin)
