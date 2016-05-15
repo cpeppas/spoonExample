@@ -37,7 +37,7 @@ dependencies {
 
     androidTestCompile "com.android.support.test.espresso:espresso-core:$ESPRESSO_VERSION"
     androidTestCompile "com.android.support.test:runner:$ANDROID_SUPPORT_TEST"
-    androidTestCompile 'com.squareup.spoon:spoon-client:1.2.0'
+    androidTestCompile 'com.squareup.spoon:spoon-client:1.5.3'
 }
 
 configurations.all {
